@@ -1,5 +1,7 @@
 package com.bridgelabz.objectorientedprograms;
 
+import java.util.Scanner;
+
 public class CalculateValueOfInventory {
 	
 	
@@ -26,8 +28,8 @@ private void calculateValue() {
 }
 private int calculateValue(ObjectOrientedPrograme objectOrientedPrograme) {
 	
+	
 	int value=(ObjectOrientedPrograme.inventoryValue=ObjectOrientedPrograme.weight*ObjectOrientedPrograme.pricePerKg);
-    
 	
 	return value;
 }
@@ -39,10 +41,16 @@ private int calculateValue(ObjectOrientedPrograme objectOrientedPrograme) {
 
 public static void main(String[] args) {
 		CalculateValueOfInventory calculateValue=new CalculateValueOfInventory();
-
-		calculateValue.addInventory("rice",20,20);
-		calculateValue.addInventory("pulses",30,35);
-		calculateValue.addInventory("wheat",40,45);
+ 
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Inventory name");
+		String name=sc.nextLine();
+		System.out.println("Enter the weight of inventory");
+		int weight=sc.nextInt();
+		System.out.println("Enter the price of inventory");
+		int pricePerKg=sc.nextInt();
+		calculateValue.addInventory(name,weight,pricePerKg);
+		
 		calculateValue.calculateValue();
 	}
 
