@@ -27,7 +27,7 @@ public class DeckOfCards {
 		int card=0;
 		for(int i=1;i<5;i++){
 			System.out.print("For Player " + i + ": \n");
-			for (int j = 1; j < 9; j++) {
+			for (int j = 1; j < 10; j++) {
 
 				System.out.print(deck[card] + "->");
 				card++;
