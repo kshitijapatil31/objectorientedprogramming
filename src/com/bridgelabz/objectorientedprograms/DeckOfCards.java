@@ -23,6 +23,18 @@ public class DeckOfCards {
 		}
 		
 	}
+	public static void distruteCards(int deck[]) {
+		int card=0;
+		for(int i=1;i<5;i++){
+			System.out.print("For Player " + i + ": \n");
+			for (int j = 1; j < 9; j++) {
+
+				System.out.print(deck[card] + "->");
+				card++;
+			}
+			System.out.println();
+		}
+	}
 	public static void main(String[] args) {
 		int[] deck=new int[52];
 		String[] suit= {"Clubs","Diamonds","Hearts","Spades"};
@@ -33,6 +45,7 @@ public class DeckOfCards {
 	     }
 	    shuffleCards(deck);
 	    displayCards(deck,suit,rank);
+	    distruteCards(deck);
 	}
 	
 	

@@ -18,7 +18,7 @@ public class CalculateStockValue {
 
 	}
 
-	private void calculateValue() {
+	public void calculateValue() {
 		for (int i = 0; i < numOfStock; i++) {
 			stockManagementArray[i].setTotalValueStock(this.calculateValue(stockManagementArray[i]));
 			
